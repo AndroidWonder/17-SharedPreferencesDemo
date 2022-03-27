@@ -32,19 +32,23 @@ public class SharedPreferencesDemo extends Activity implements View.OnClickListe
         editPassword =  (EditText)findViewById(R.id.EditText02);
         editAge =  (EditText)findViewById(R.id.EditText03);
         button = (Button)findViewById(R.id.Button01);
+
         button.setOnClickListener(this);
 
     }
-    	//when button clicked, store preferences 
+    	//when button clicked, store data from UI as shared preferences values
         public void onClick(View view) { 
         	       
-        SPrefs = getSharedPreferences("MySPrefs", MODE_PRIVATE);
+        SPrefs = getSharedPreferences("MySPrefs", 0);
         SharedPreferences.Editor editor = SPrefs.edit();
+
         editor.putString("name", editName.getText().toString());
         String password = editPassword.getText().toString();
         editor.putString("password", password);
         editor.putInt("age",
                 Integer.parseInt(editAge.getText().toString()));
+
+        //check for correct password
         if (password.equals("Hello") ) {
             login = true;
             editor.putBoolean("login", true);}

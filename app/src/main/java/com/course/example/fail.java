@@ -18,11 +18,12 @@ public class fail extends Activity {
         setContentView(R.layout.error);
         
         text =  (TextView)findViewById(R.id.TextView10);
-                
-        SPrefs = getSharedPreferences("MySPrefs", MODE_PRIVATE);
+
+        //access shared preferences
+        SPrefs = getSharedPreferences("MySPrefs", 0);
         String str = SPrefs.getString("name", "Foobar");
 
-        text.setText("Invalid login, " + str +"\n" + "Try again");
+        text.setText("Invalid login, " + str + "\n" + "Try again");
         
     }
 }

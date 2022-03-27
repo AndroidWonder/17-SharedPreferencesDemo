@@ -20,8 +20,9 @@ public class pass extends Activity {
         setContentView(R.layout.logged_in);
         
         text =  (TextView)findViewById(R.id.TextView20);
-                
-        SPrefs = getSharedPreferences("MySPrefs", MODE_PRIVATE);
+
+        //access shared preferences
+        SPrefs = getSharedPreferences("MySPrefs", 0);
         String str = SPrefs.getString("name", "Foobar");
 
         text.setText("Welcome, " + str);                    	
