@@ -52,7 +52,7 @@ public class SharedPreferencesDemo extends Activity implements View.OnClickListe
             editor.putBoolean("login", false);
         editor.commit();
         
-        //clear text boxes
+        //clear EditText widgets
         editName.setText("");
         editPassword.setText("");
         editAge.setText("");
