@@ -11,8 +11,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    <activity android:name=".fail" android:exported="true"/>
-    <activity android:name=".pass" android:exported="true"/>
+    <activity android:name=".fail" />
+    <activity android:name=".pass" />
     </application>
 
 </manifest>
